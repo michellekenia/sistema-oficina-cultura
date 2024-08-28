@@ -8,9 +8,11 @@ import { AlunoInfrastructureModule } from './aluno/infrastructure/aluno-infrastr
 import { CursoCoreModule } from './curso/core/core.module';
 import { CursoModule } from './curso/application/curso.module';
 import { CursoInfrastructureModule } from './curso/infraestrutura/curso-infrastructure.module';
+import { AdminModule } from './admin/admin.module';
+import { AdminModule } from './admin/admin.module';
 
 @Module({
-  imports: [AlunoCoreModule, CursoCoreModule],
+  imports: [AlunoCoreModule, CursoCoreModule, AdminModule],
   controllers: [AppController],
   providers: [AppService],
   exports: []

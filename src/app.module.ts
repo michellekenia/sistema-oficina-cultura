@@ -9,9 +9,10 @@ import { CursoCoreModule } from './curso/core/core.module';
 import { CursoModule } from './curso/application/curso.module';
 import { CursoInfrastructureModule } from './curso/infraestrutura/curso-infrastructure.module';
 import { AdminModule } from './admin/admin.module';
+import { AdminCoreModule } from './admin/core/admin-core';
 
 @Module({
-  imports: [AlunoCoreModule, CursoCoreModule, AdminModule],
+  imports: [AlunoCoreModule, CursoCoreModule, AdminCoreModule],
   controllers: [AppController],
   providers: [AppService],
   exports: []
@@ -28,7 +29,7 @@ export class AppModule {
         CursoCoreModule.forRoot(options),
         CursoModule.comInfraestrutura(
           CursoInfrastructureModule.use(options.driver),
-        ), 
+        ),
       ],
     };
   }

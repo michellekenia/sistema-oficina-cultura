@@ -26,5 +26,10 @@ export class CursoService {
     return this.cursoRepository.listar();
   }
 
+  buscarPorNome(createCurso: CreateCursoCommand){
+    const cursoExiste = this.cursoRepository.buscarPorNome(
+      createCurso.nomeCurso
+    )
+  }
 
 }

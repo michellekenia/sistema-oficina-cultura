@@ -4,6 +4,9 @@ import { Curso } from "src/curso/domain/curso";
 
 @Injectable()
 export class InFileCursoRepository implements CursoRepository{
+    buscarPorNome(nomeCurso: string): Promise<Curso> {
+        throw new Error("Method not implemented.");
+    }
     async salvar(curso: Curso): Promise<Curso> {
         throw new Error("Method not implemented.");
     }

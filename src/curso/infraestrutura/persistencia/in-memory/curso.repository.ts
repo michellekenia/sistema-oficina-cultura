@@ -6,6 +6,9 @@ import { CursoEntity } from './curso.entity';
 
 @Injectable()
 export class InMemoryCursoRepository implements CursoRepository {
+  buscarPorNome(nomeCurso: string): Promise<Curso> {
+    throw new Error('Method not implemented.');
+  }
   private readonly cursos = new Map<string, CursoEntity>();
 
   async salvar(curso: Curso): Promise<Curso> {

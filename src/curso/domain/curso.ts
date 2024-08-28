@@ -6,5 +6,4 @@ export class Curso {
     descricao: string;
     professores: string[];
     alunos: Aluno[];
-    estudantes: never[];
   }
